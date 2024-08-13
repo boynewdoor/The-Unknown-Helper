@@ -1,0 +1,386 @@
+/* Reset some default styles */
+body, h1, h2, p, ul, li, form, textarea {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f2f5;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Styling */
+header {
+    background: #333; /* Dark background for header */
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    text-align: center;
+    margin: 0; /* Remove margin for header alignment */
+}
+
+.logo {
+    max-width: 150px; /* Adjust size as needed */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px; /* Adjust spacing for better alignment */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f39c12; /* Gold color on hover */
+}
+
+/* Main Content Styling */
+main {
+    flex: 1;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 20px auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+h1, h2 {
+    color: #444;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.5em;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+form textarea {
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+form button {
+    margin-top: 10px;
+    padding: 12px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+form button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Message Board Styling */
+#messagesContainer {
+    margin-top: 20px;
+}
+
+.message {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 15px;
+    margin-bottom: 15px;
+    position: relative;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.message p {
+    margin: 0;
+}
+
+.message .username {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.message .content {
+    margin-top: 5px;
+}
+
+.message-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.message .delete-btn, .message .reply-btn {
+    border: none;
+    background: linear-gradient(145deg, #ffffff, #e0e0e0);
+    color: #007bff;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 0.9em;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.message .delete-btn {
+    background: linear-gradient(145deg, #ffdddd, #ffb3b3);
+}
+
+.message .reply-btn {
+    background: linear-gradient(145deg, #d3f9d8, #b1e5b8);
+}
+
+.message .delete-btn:hover {
+    background: linear-gradient(145deg, #ffb3b3, #ff9999);
+    color: #e60000;
+    transform: translateY(-2px);
+}
+
+.message .reply-btn:hover {
+    background: linear-gradient(145deg, #b1e5b8, #9fe49c);
+    color: #009933;
+    transform: translateY(-2px);
+}
+
+.reply-container {
+    margin-top: 15px;
+}
+
+.reply {
+    margin-top: 10px;
+    padding: 10px;
+    background: #f1f1f1;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+.reply-form {
+    margin-top: 10px;
+    display: none;
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+}
+
+.reply-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+.reply-form button {
+    margin-top: 10px;
+    padding: 8px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+}
+
+.reply-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Clear All Messages Button */
+#clearMessagesBtn {
+    background-color: #f44336; /* Red color */
+    color: white;              /* White text */
+    border: none;              /* No border */
+    border-radius: 5px;       /* Rounded corners */
+    padding: 10px 20px;        /* Padding */
+    font-size: 16px;           /* Font size */
+    cursor: pointer;           /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+    margin-top: 20px;          /* Space above the button */
+}
+
+#clearMessagesBtn:hover {
+    background-color: #d32f2f; /* Darker red on hover */
+}
+
+#clearMessagesBtn:active {
+    background-color: #b71c1c; /* Even darker red when clicked */
+    transform: scale(0.98);    /* Slightly scale down when pressed */
+}
+
+/* Contact Page Styling */
+#contact {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-info {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.contact-info h2 {
+    margin-top: 0;
+}
+
+.contact-info p {
+    margin: 10px 0;
+}
+
+.social-media h2 {
+    margin-top: 0;
+}
+
+.social-media ul {
+    list-style: none;
+    padding: 0;
+}
+
+.social-media li {
+    margin: 5px 0;
+}
+
+.social-media a {
+    text-decoration: none;
+    color: #1e88e5; /* Blue color */
+    font-weight: bold;
+}
+
+.social-media a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Styling */
+footer {
+    background: #333; /* Dark background for footer */
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.footer-nav {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.footer-nav li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.footer-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.footer-nav a:hover {
+    color: #f39c12; /* Gold color on hover */
+}
+
+.footer-social {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.footer-social li {
+    display: inline;
+}
+
+.social-icon {
+    color: #fff;
+    font-size: 1.5em;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-icon:hover {
+    color: #f39c12; /* Gold color on hover */
+}
